@@ -1,0 +1,22 @@
+ion-content {
+
+    ion-item {
+        position: relative;
+        height: 20%;
+        margin: 20px;
+
+        ion-label {
+            position: relative;
+            font-family: fantasy;
+            text-align: center;
+            font-size: large;
+        }
+    }
+
+    ion-button {
+
+        position: relative;
+       
+        margin: 20px;
+    }
+}

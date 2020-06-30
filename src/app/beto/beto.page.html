@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color= "primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" [routerLink]="['/home']">
+      <ion-icon name="enter-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>Quitanda do Beto</ion-title>
+  </ion-toolbar>  
+</ion-header>
+
+
+<ion-content>
+        <ion-grid>
+          <ion-row>            
+            <ion-col size="6" *ngFor='let fruta of frutas | async'>
+                    <ion-card >                      
+                            <h4>{{fruta.nome}}</h4>
+                            <p >{{fruta.preco | currency:'R$' }}</p>
+                            <!-- <ion-button (click)="showAdd()" >
+                              <ion-icon name="cart"></ion-icon>
+                            </ion-button> -->                         
+                            
+                            <ion-thumbnail (click)="abrirPhoto($event, fruta.img)">
+                              <img src="{{fruta.img}}">                                                               
+                            </ion-thumbnail>                                          
+                    </ion-card>              
+            </ion-col>       
+          </ion-row>
+        </ion-grid> 
+    <!-- fab whatssap -->
+  <ion-fab vertical="bottom" horizontal="left" slot="fixed">
+    <ion-fab-button>
+      <p>
+        <a 
+          href="#" style="text-decoration: none;"
+          onclick="window.open(
+            'http://api.whatsapp.com/send?1=pt_BR&phone=55 43 9960-0460', 
+            '_system', 'location=yes'); return false;"
+        >
+          <img src="/assets/img/watss.jpg" style="width:100%;">
+        </a>
+        </p>
+    </ion-fab-button>
+  </ion-fab>
+    <!-- fab adicionar -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button  (click)="showAdMobFreeRewardVideoAds()" [routerLink]="['/carrinhobeto']">
+      <ion-icon name="cart"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> 
+  <ion-item></ion-item> 
+
+</ion-content>
+
+

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar yext="center" color="primary">
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="full">
+    <ion-label>
+      Login
+    </ion-label>
+  </ion-item>
+
+  <form #meuForm="ngForm">    
+    <ion-item>
+      <ion-label>Email:</ion-label>
+      <ion-input type="text"  name="email" [(ngModel)]="user.email"  #email="ngModel" required minlength="5"></ion-input>      
+    </ion-item>
+    <ion-item *ngIf="email.invalid " color="danger">
+      <div *ngIf="email?.errors.required">
+        Texto obrigatório.
+      </div>
+      <div *ngIf="email?.errors.minlength">
+        Obrigatório minimo de cinco caracteres.
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Senha:</ion-label>
+      <ion-input type="password"  name="password" [(ngModel)]="user.password"></ion-input>      
+    </ion-item>
+    
+    <ion-button expand="block"  color="primary" [disabled]="!meuForm.form.valid" (click)="signIn()">Entrar</ion-button>
+     
+  </form>
+  
+  <ion-button expand="block" fill="outline" color="danger" [routerLink]="['/reset']">Esqueci minha senha</ion-button>          
+  
+  <ion-button  expand="block" fill="outline" color="primary" [routerLink]="['/signup']">Criar conta</ion-button>          
+  
+
+</ion-content>

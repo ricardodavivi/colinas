@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color= "primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Novo Produto</ion-title>
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content>
+  <form #meuForm="ngForm">
+    <ion-item>
+      <ion-label>Produtos:</ion-label>
+      <ion-input type="text" [(ngModel)]="panela.nome" name="nome" #nome="ngModel" required minlength="3"></ion-input>      
+    </ion-item>
+    <ion-item *ngIf="nome.invalid " color="danger">
+      <div *ngIf="nome?.errors.required">
+        Texto obrigatório.
+      </div>
+      <div *ngIf="nome?.errors.minlength">
+        Obrigatório minimo de cinco caracteres.
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Preço:</ion-label>
+      <ion-input type="text" [(ngModel)]="panela.preco" name="nome" ></ion-input>      
+    </ion-item>
+
+    <ion-item>
+      <ion-card>
+        <img src="/assets/img/visa.png"/>
+        <ion-card-content>
+          
+
+        </ion-card-content>
+        <ion-button expand="block" fill="outline" color="danger">Remover</ion-button>
+      </ion-card>
+    </ion-item>
+
+    <ion-button expand="block" [disabled]="!meuForm.form.valid" (click)=onSubmit()>Cadastrar</ion-button>
+  </form>
+  <ion-button expand="block"  [routerLink]="['/list']">Voltar</ion-button>
+  
+ 
+</ion-content>

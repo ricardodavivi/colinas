@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color= "primary">
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item>
+      <ion-label>Mudar senha</ion-label>            
+    </ion-item>
+    <ion-item>
+      <ion-label>Email:</ion-label>
+      <ion-input type="text"  name="email" [(ngModel)]="userEmail" ></ion-input>      
+    </ion-item>    
+    <ion-button expand="block" fill="outline" color="primary" (click)="resetPassword()">Enviar</ion-button>
+     
+  </form> 
+  <ion-button expand="block" fill="outline" color="primary" [routerLink]="['/signin']">Voltar</ion-button> 
+</ion-content>

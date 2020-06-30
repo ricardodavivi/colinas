@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Megapromoção</ion-title>
+    <ion-buttons slot="end" [routerLink]="['/home']">
+       <ion-icon name="enter-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+
+  <ion-card (click)="showAdMobFreeRewardVideoAds()" color="primary">
+    <ion-card-content >
+     
+     <a  href="#" onclick="window.open('https://play.google.com/store/apps/details?id=rc.lr.nascimento', '_system', 'location=yes'); return false;"> Acesse o link, avalie o app e concorra, ou!!</a>
+    </ion-card-content>
+ </ion-card>
+ <ion-card (click)="showAdMobFreeRewardVideoAds()"  color="primary">
+  <p>
+    <a 
+      href="#" style="text-decoration: none;"
+      onclick="window.open(
+        'http://api.whatsapp.com/send?1=pt_BR&phone=55 43 9813-9746', 
+        '_system', 'location=yes'); return false;"
+    >
+      <img src="/assets/img/watss.jpg" style="width:100%;">
+    </a>
+    </p>Envie uma mensagem para o What dizendo "Eu quero".</ion-card>
+
+</ion-content>

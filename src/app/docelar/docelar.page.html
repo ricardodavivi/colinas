@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color= "primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" [routerLink]="['/home']">
+      <ion-icon name="enter-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>Docelar</ion-title>
+  </ion-toolbar>  
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor='let bloco of blocos | async'>
+        <ion-card color="secondary">
+          <h4>{{bloco.nome}}</h4>
+          <p>{{bloco.preco | currency:'R$' }}</p>
+          
+          <ion-thumbnail (click)="abrirPhoto($event, bloco.img)">
+            <img src="{{bloco.img}}">     
+                                            
+          </ion-thumbnail>                    
+        </ion-card>              
+      </ion-col>      
+    </ion-row>
+  </ion-grid> 
+  
+
+
+  <!-- fab whatssap -->
+  <ion-fab vertical="bottom" horizontal="left" slot="fixed">
+    <ion-fab-button>
+      <p>
+        <a 
+          href="#" style="text-decoration: none;"
+          onclick="window.open(
+            'http://api.whatsapp.com/send?1=pt_BR&phone=55 43 9804-7715', 
+            '_system', 'location=yes'); return false;"
+        >
+          <img src="/assets/img/watss.jpg" style="width:100%;">
+        </a>
+        </p>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-item></ion-item> 
+
+
+</ion-content>
+ 

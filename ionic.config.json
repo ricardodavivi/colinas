@@ -1,5 +1,7 @@
 {
   "name": "colinas",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

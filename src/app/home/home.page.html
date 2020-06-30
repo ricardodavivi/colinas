@@ -1,20 +1,139 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+  <ion-toolbar color= "primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" [routerLink]="['/signin']">
+      <ion-icon name="enter-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>Colina's</ion-title>
+  </ion-toolbar>  
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  
+  <ion-card [routerLink]="['/beto']" color="secondary">Quitanda do Beto
+    <ion-thumbnail>
+      <img src="/assets/img/fruta.png" >
+    </ion-thumbnail>    
+  </ion-card>
+
+  <ion-card [routerLink]="['/list']"  color="secondary">Visa
+    <ion-thumbnail>
+      <img src="/assets/img/carrinho.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/teclider']"  color="secondary">TecLíder
+    <ion-thumbnail>
+      <img src="/assets/img/cel.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/jd']"  color="secondary">Jd Ração
+    <ion-thumbnail>
+      <img src="/assets/img/cachorro.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/mgr']"  color="secondary">Mgr Móveis
+    <ion-thumbnail>
+      <img src="/assets/img/armario.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/alessandra']"  color="secondary">Alessandra Convitería
+    <ion-thumbnail>
+      <img src="/assets/img/presente.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/flavia']"  color="secondary">Flávia Presentes
+    <ion-thumbnail>
+      <img src="/assets/img/presente2.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/rogatte']"  color="secondary">Pizzaria Rogatte
+    <ion-thumbnail>
+      <img src="/assets/img/pizza.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/paodemel']"  color="secondary">Padaria Pão de Mel
+    <ion-thumbnail>
+      <img src="/assets/img/pao.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/estofados']"  color="secondary">Mauricio Estofados
+    <ion-thumbnail>
+      <img src="/assets/img/sofa.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/boutique']"  color="secondary">Boutique Adriana
+    <ion-thumbnail>
+      <img src="/assets/img/presente2.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/emporio']"  color="secondary">Empórios Marcelo
+    <ion-thumbnail>
+      <img src="/assets/img/presente.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/novafarma']"  color="secondary">Nova Farma
+    <ion-thumbnail>
+      <img src="/assets/img/farma.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/kuriango']"  color="secondary">Kuriango
+    <ion-thumbnail>
+      <img src="/assets/img/beer.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/fernandes']"  color="secondary">Casa Fernandes
+    <ion-thumbnail>
+      <img src="/assets/img/construcao.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/bike']"  color="secondary">Real Bike
+    <ion-thumbnail>
+      <img src="/assets/img/bike.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/luciano']"  color="secondary">Conveniência da Dany
+    <ion-thumbnail>
+      <img src="/assets/img/carrinho.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/docelar']"  color="secondary">Docelar
+    <ion-thumbnail>
+      <img src="/assets/img/construcao.png" >
+    </ion-thumbnail> 
+  </ion-card>
+
+  <ion-card [routerLink]="['/delicias']"  color="secondary">Delicias da Flávia
+    <ion-thumbnail>
+      <img src="/assets/img/presente2.png" >
+    </ion-thumbnail> 
+  </ion-card> 
+
+    
+    
+    
+    
+  <ion-card [routerLink]="['/privacidade']" style="height: 50px;">
+    Política de privacidade
+  </ion-card>
+  <ion-item></ion-item>    
+ 
 </ion-content>

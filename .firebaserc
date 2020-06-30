@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "colinas-bc330": {
+      "hosting": {
+        "app": [
+          "colinas-bc330"
+        ]
+      }
+    }
+  }
+}

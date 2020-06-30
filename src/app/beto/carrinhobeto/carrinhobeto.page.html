@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color= "primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" [routerLink]="['/beto']">
+      <ion-icon name="enter-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>Minha lista de compras</ion-title>
+  </ion-toolbar>   
+</ion-header>
+
+
+<ion-content>
+  <ion-list color="primary">    
+    <ion-item-sliding *ngFor="let task of tasks">
+
+      <ion-card text-uppercase color="primary">  {{task.name}}  
+          <ion-item color="primary">                    
+            <ion-label text-uppercase >  {{task.date | date:' HH:mm'}}  </ion-label>
+            <ion-label text-uppercase >  {{task.date | date:'dd/MM/yyyy '}}  </ion-label>
+            <ion-label text-uppercase >  {{task.taskToDo2}}  </ion-label>            
+          </ion-item>
+      </ion-card>
+      <ion-item-options  side="start">
+        <ion-item-option (click)="delete(task)" color="danger">Excluir</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list> 
+   <!-- fab adicionar -->
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button  >
+    <ion-icon name="cart"></ion-icon>
+  </ion-fab-button>
+</ion-fab>                 
+
+</ion-content>
