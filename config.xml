@@ -127,6 +127,5 @@
     </platform>
     <plugin name="cordova-plugin-background-mode" spec="^0.7.3" />
     <engine name="android" spec="^8.1.0" />
-    <preference name="GOOGLE_MAPS_ANDROID_API_KEY" value="AIzaSyBAQliDHzevuI-y2F4SWknTRLBLU26LSFU" />
-    <preference name="GOOGLE_MAPS_IOS_API_KEY" value="AIzaSyBAQliDHzevuI-y2F4SWknTRLBLU26LSFU" />
+    
 </widget>
